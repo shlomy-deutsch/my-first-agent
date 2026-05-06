@@ -2,26 +2,38 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/lib/auth-context';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const { login, loading } = useAuth();
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
-    // Simulate login request
-    setTimeout(() => {
-      setIsLoading(false);
-      alert('Login attempt with: ' + email);
-    }, 1000);
+    setError('');
+
+    try {
+      await login(email, password);
+      router.push('/dashboard'); // Redirect to dashboard after successful login
+    } catch (error: any) {
+      setError(error.message);
+    }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-xl p-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-6 text-center">Login</h1>
+
+        {error && (
+          <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+            {error}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -56,10 +68,10 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            disabled={isLoading}
+            disabled={loading}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isLoading ? 'Logging in...' : 'Login'}
+            {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
 
@@ -72,7 +84,7 @@ export default function LoginPage() {
 
         <div className="mt-4 pt-4 border-t border-gray-200">
           <p className="text-xs text-gray-500 text-center">
-            Demo admin: <span className="font-mono text-gray-700">admin@example.com</span>
+            Note: Firebase configuration required for authentication
           </p>
         </div>
       </div>

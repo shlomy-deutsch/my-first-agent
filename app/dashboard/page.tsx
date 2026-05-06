@@ -1,16 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-
-interface DashboardData {
-  userName: string;
-  userEmail: string;
-  accountCreated: string;
-  totalPurchases: number;
-  totalSpent: string;
-  memberSince: string;
-}
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/lib/auth-context';
 
 interface Activity {
   id: number;
@@ -21,21 +14,42 @@ interface Activity {
 }
 
 export default function DashboardPage() {
-  const [userData] = useState<DashboardData>({
-    userName: 'John Doe',
-    userEmail: 'john@example.com',
-    accountCreated: 'Jan 15, 2024',
-    totalPurchases: 23,
-    totalSpent: '$1,245.00',
-    memberSince: '1 year, 4 months',
-  });
-
+  const { user, logout, loading } = useAuth();
+  const router = useRouter();
   const [activities] = useState<Activity[]>([
-    { id: 1, title: 'Purchase Complete', description: 'You purchased Premium Plan', date: 'May 3, 2026', type: 'purchase' },
-    { id: 2, title: 'Payment Processed', description: 'Payment of $99.00 processed successfully', date: 'May 1, 2026', type: 'payment' },
-    { id: 3, title: 'Profile Updated', description: 'Your profile information was updated', date: 'Apr 28, 2026', type: 'profile' },
-    { id: 4, title: 'Email Verified', description: 'Your email was verified', date: 'Apr 25, 2026', type: 'security' },
+    { id: 1, title: 'Account Created', description: 'Welcome to our platform!', date: new Date().toLocaleDateString(), type: 'profile' },
+    { id: 2, title: 'Email Verified', description: 'Your email has been verified', date: new Date().toLocaleDateString(), type: 'security' },
   ]);
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push('/login');
+    }
+  }, [user, loading, router]);
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      router.push('/login');
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return null; // Will redirect to login
+  }
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -48,9 +62,12 @@ export default function DashboardPage() {
               <Link href="/admin" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Admin Dashboard
               </Link>
-              <Link href="/login" className="text-red-600 hover:text-red-700 font-semibold">
+              <button
+                onClick={handleLogout}
+                className="text-red-600 hover:text-red-700 font-semibold"
+              >
                 Logout
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -59,31 +76,35 @@ export default function DashboardPage() {
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Welcome Section */}
         <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg p-8 text-white mb-8">
-          <h2 className="text-3xl font-bold mb-2">Welcome back, {userData.userName}!</h2>
+          <h2 className="text-3xl font-bold mb-2">Welcome back, {user.displayName || user.email}!</h2>
           <p className="text-blue-100">Here's an overview of your account activity and status</p>
         </div>
 
         {/* User Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-gray-500 text-sm font-medium">Total Purchases</h3>
-            <p className="text-3xl font-bold text-gray-900 mt-2">{userData.totalPurchases}</p>
-            <p className="text-gray-600 text-sm mt-2">Orders placed</p>
+            <h3 className="text-gray-500 text-sm font-medium">Account Status</h3>
+            <p className="text-3xl font-bold text-green-600 mt-2">Active</p>
+            <p className="text-gray-600 text-sm mt-2">Verified</p>
           </div>
           <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-gray-500 text-sm font-medium">Total Spent</h3>
-            <p className="text-3xl font-bold text-gray-900 mt-2">{userData.totalSpent}</p>
-            <p className="text-gray-600 text-sm mt-2">All time</p>
+            <h3 className="text-gray-500 text-sm font-medium">Email Verified</h3>
+            <p className="text-3xl font-bold text-gray-900 mt-2">
+              {user.emailVerified ? 'Yes' : 'No'}
+            </p>
+            <p className="text-gray-600 text-sm mt-2">Status</p>
           </div>
           <div className="bg-white rounded-lg shadow p-6">
             <h3 className="text-gray-500 text-sm font-medium">Member Since</h3>
-            <p className="text-3xl font-bold text-gray-900 mt-2">1+</p>
-            <p className="text-gray-600 text-sm mt-2">Year</p>
+            <p className="text-3xl font-bold text-gray-900 mt-2">
+              {user.metadata.creationTime ? new Date(user.metadata.creationTime).getFullYear() : '2024'}
+            </p>
+            <p className="text-gray-600 text-sm mt-2">Joined</p>
           </div>
           <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-gray-500 text-sm font-medium">Account Status</h3>
-            <p className="text-3xl font-bold text-green-600 mt-2">Active</p>
-            <p className="text-gray-600 text-sm mt-2">All good</p>
+            <h3 className="text-gray-500 text-sm font-medium">Last Login</h3>
+            <p className="text-3xl font-bold text-gray-900 mt-2">Today</p>
+            <p className="text-gray-600 text-sm mt-2">Recent</p>
           </div>
         </div>
 
@@ -96,19 +117,22 @@ export default function DashboardPage() {
               <div className="space-y-4">
                 <div>
                   <label className="text-sm text-gray-500">Full Name</label>
-                  <p className="text-gray-900 font-semibold">{userData.userName}</p>
+                  <p className="text-gray-900 font-semibold">{user.displayName || 'Not set'}</p>
                 </div>
                 <div>
                   <label className="text-sm text-gray-500">Email Address</label>
-                  <p className="text-gray-900 font-semibold break-all">{userData.userEmail}</p>
+                  <p className="text-gray-900 font-semibold break-all">{user.email}</p>
                 </div>
                 <div>
-                  <label className="text-sm text-gray-500">Member Since</label>
-                  <p className="text-gray-900 font-semibold">{userData.accountCreated}</p>
+                  <label className="text-sm text-gray-500">User ID</label>
+                  <p className="text-gray-900 font-semibold text-xs break-all">{user.uid}</p>
                 </div>
-                <button className="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">
-                  Edit Profile
-                </button>
+                <div>
+                  <label className="text-sm text-gray-500">Email Verified</label>
+                  <p className={`font-semibold ${user.emailVerified ? 'text-green-600' : 'text-red-600'}`}>
+                    {user.emailVerified ? 'Verified' : 'Not Verified'}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

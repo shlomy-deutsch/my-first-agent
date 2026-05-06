@@ -59,6 +59,9 @@ export default function DashboardPage() {
           <div className="flex justify-between items-center">
             <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
             <div className="flex gap-4">
+              <Link href="/messages" className="text-green-600 hover:text-green-700 font-semibold">
+                Messages
+              </Link>
               <Link href="/admin" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Admin Dashboard
               </Link>

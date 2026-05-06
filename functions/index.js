@@ -27,7 +27,7 @@ async function verifyAuthToken(req, res, next) {
   }
 }
 
-app.post('/api/send-message', verifyAuthToken, async (req, res) => {
+app.post('/send-message', verifyAuthToken, async (req, res) => {
   const { message } = req.body;
   if (!message) {
     return res.status(400).json({ error: 'Message is required' });

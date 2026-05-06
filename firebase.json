@@ -24,6 +24,15 @@
           }
         ]
       }
+    ],
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "function": "appApi"
+      }
     ]
+  },
+  "functions": {
+    "source": "functions"
   }
 }

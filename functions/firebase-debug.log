@@ -1,0 +1,683 @@
+[debug] [2026-05-11T07:35:29.714Z] ----------------------------------------------------------------------
+[debug] [2026-05-11T07:35:29.719Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\BARAKO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions --project my-next-b12c9
+[debug] [2026-05-11T07:35:29.719Z] CLI Version:   15.16.0
+[debug] [2026-05-11T07:35:29.720Z] Platform:      win32
+[debug] [2026-05-11T07:35:29.720Z] Node Version:  v22.14.0
+[debug] [2026-05-11T07:35:29.720Z] Time:          Mon May 11 2026 10:35:29 GMT+0300 (שעון ישראל (קיץ))
+[debug] [2026-05-11T07:35:29.721Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-11T07:35:35.597Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-11T07:35:35.598Z] > authorizing via signed-in user (s0583285252@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2026-05-11T07:35:35.638Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-05-11T07:35:35.638Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-05-11T07:35:35.649Z] Write emulator hub locator at C:\Users\BARAKO\AppData\Local\Temp\hub-my-next-b12c9.json
+[debug] [2026-05-11T07:35:35.676Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-05-11T07:35:35.677Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-05-11T07:35:35.678Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-05-11T07:35:35.678Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2026-05-11T07:35:35.718Z] defaultcredentials: writing to file C:\Users\BARAKO\AppData\Roaming\firebase\s0583285252_gmail_com_application_default_credentials.json
+[debug] [2026-05-11T07:35:35.723Z] Setting GAC to C:\Users\BARAKO\AppData\Roaming\firebase\s0583285252_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\BARAKO\\AppData\\Roaming\\firebase\\s0583285252_gmail_com_application_default_credentials.json"}}
+[debug] [2026-05-11T07:35:35.727Z] Checked if tokens are valid: true, expires at: 1778486015110
+[debug] [2026-05-11T07:35:35.727Z] Checked if tokens are valid: true, expires at: 1778486015110
+[debug] [2026-05-11T07:35:35.730Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-next-b12c9/adminSdkConfig [none]
+[debug] [2026-05-11T07:35:36.766Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-next-b12c9/adminSdkConfig 200
+[debug] [2026-05-11T07:35:36.766Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-next-b12c9/adminSdkConfig {"projectId":"my-next-b12c9","storageBucket":"my-next-b12c9.firebasestorage.app"}
+[info] i  ui: downloading ui-v1.15.0.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.15.0.zip..."}}
+[debug] [2026-05-11T07:35:36.805Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip 
+[debug] [2026-05-11T07:35:36.942Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip 200
+[debug] [2026-05-11T07:35:36.943Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.15.0.zip [stream]
+[debug] [2026-05-11T07:35:39.828Z] Data is 3538469
+[debug] [2026-05-11T07:35:39.828Z] [unzip] Entry: client/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-05-11T07:35:39.829Z] [unzip] Processing entry: client\
+[debug] [2026-05-11T07:35:39.829Z] [unzip] mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\
+[debug] [2026-05-11T07:35:39.830Z] [unzip] Entry: client/favicon-16x16.png (compressed_size=293 bytes, uncompressed_size=293 bytes)
+[debug] [2026-05-11T07:35:39.830Z] [unzip] Processing entry: client\favicon-16x16.png
+[debug] [2026-05-11T07:35:39.831Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.831Z] [unzip] Writing file: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\favicon-16x16.png
+[debug] [2026-05-11T07:35:39.833Z] [unzip] Entry: client/safari-pinned-tab.svg (compressed_size=1433 bytes, uncompressed_size=2611 bytes)
+[debug] [2026-05-11T07:35:39.834Z] [unzip] Processing entry: client\safari-pinned-tab.svg
+[debug] [2026-05-11T07:35:39.834Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.834Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\safari-pinned-tab.svg
+[debug] [2026-05-11T07:35:39.840Z] [unzip] Entry: client/favicon.ico (compressed_size=2933 bytes, uncompressed_size=13294 bytes)
+[debug] [2026-05-11T07:35:39.840Z] [unzip] Processing entry: client\favicon.ico
+[debug] [2026-05-11T07:35:39.840Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.841Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\favicon.ico
+[debug] [2026-05-11T07:35:39.843Z] [unzip] Entry: client/index.html (compressed_size=1364 bytes, uncompressed_size=3071 bytes)
+[debug] [2026-05-11T07:35:39.844Z] [unzip] Processing entry: client\index.html
+[debug] [2026-05-11T07:35:39.844Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.845Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\index.html
+[debug] [2026-05-11T07:35:39.849Z] [unzip] Entry: client/android-chrome-192x192.png (compressed_size=2684 bytes, uncompressed_size=2684 bytes)
+[debug] [2026-05-11T07:35:39.849Z] [unzip] Processing entry: client\android-chrome-192x192.png
+[debug] [2026-05-11T07:35:39.849Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.850Z] [unzip] Writing file: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\android-chrome-192x192.png
+[debug] [2026-05-11T07:35:39.851Z] [unzip] Entry: client/apple-touch-icon.png (compressed_size=2123 bytes, uncompressed_size=2152 bytes)
+[debug] [2026-05-11T07:35:39.852Z] [unzip] Processing entry: client\apple-touch-icon.png
+[debug] [2026-05-11T07:35:39.852Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.852Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\apple-touch-icon.png
+[debug] [2026-05-11T07:35:39.854Z] [unzip] Entry: client/android-chrome-512x512.png (compressed_size=5369 bytes, uncompressed_size=5411 bytes)
+[debug] [2026-05-11T07:35:39.854Z] [unzip] Processing entry: client\android-chrome-512x512.png
+[debug] [2026-05-11T07:35:39.854Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.855Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\android-chrome-512x512.png
+[debug] [2026-05-11T07:35:39.857Z] [unzip] Entry: client/manifest.json (compressed_size=245 bytes, uncompressed_size=551 bytes)
+[debug] [2026-05-11T07:35:39.857Z] [unzip] Processing entry: client\manifest.json
+[debug] [2026-05-11T07:35:39.857Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.858Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\manifest.json
+[debug] [2026-05-11T07:35:39.862Z] [unzip] Entry: client/robots.txt (compressed_size=26 bytes, uncompressed_size=26 bytes)
+[debug] [2026-05-11T07:35:39.863Z] [unzip] Processing entry: client\robots.txt
+[debug] [2026-05-11T07:35:39.863Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.864Z] [unzip] Writing file: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\robots.txt
+[debug] [2026-05-11T07:35:39.865Z] [unzip] Entry: client/mstile-150x150.png (compressed_size=2034 bytes, uncompressed_size=2034 bytes)
+[debug] [2026-05-11T07:35:39.865Z] [unzip] Processing entry: client\mstile-150x150.png
+[debug] [2026-05-11T07:35:39.866Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:39.866Z] [unzip] Writing file: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\mstile-150x150.png
+[debug] [2026-05-11T07:35:39.868Z] [unzip] Entry: client/assets/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-05-11T07:35:39.868Z] [unzip] Processing entry: client\assets\
+[debug] [2026-05-11T07:35:39.868Z] [unzip] mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\
+[debug] [2026-05-11T07:35:39.869Z] [unzip] Entry: client/assets/index-BX-A56oj.js (compressed_size=582089 bytes, uncompressed_size=2092775 bytes)
+[debug] [2026-05-11T07:35:39.869Z] [unzip] Processing entry: client\assets\index-BX-A56oj.js
+[debug] [2026-05-11T07:35:39.869Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets
+[debug] [2026-05-11T07:35:39.870Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\index-BX-A56oj.js
+[debug] [2026-05-11T07:35:39.902Z] [unzip] Entry: client/assets/index-CjB9C900.css (compressed_size=35979 bytes, uncompressed_size=298654 bytes)
+[debug] [2026-05-11T07:35:39.902Z] [unzip] Processing entry: client\assets\index-CjB9C900.css
+[debug] [2026-05-11T07:35:39.902Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets
+[debug] [2026-05-11T07:35:39.903Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\index-CjB9C900.css
+[debug] [2026-05-11T07:35:39.909Z] [unzip] Entry: client/assets/index-BX-A56oj.js.map (compressed_size=2362482 bytes, uncompressed_size=10036679 bytes)
+[debug] [2026-05-11T07:35:39.909Z] [unzip] Processing entry: client\assets\index-BX-A56oj.js.map
+[debug] [2026-05-11T07:35:39.909Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets
+[debug] [2026-05-11T07:35:39.910Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\index-BX-A56oj.js.map
+[debug] [2026-05-11T07:35:40.065Z] [unzip] Entry: client/assets/extensions/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-05-11T07:35:40.065Z] [unzip] Processing entry: client\assets\extensions\
+[debug] [2026-05-11T07:35:40.065Z] [unzip] mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\extensions\
+[debug] [2026-05-11T07:35:40.066Z] [unzip] Entry: client/assets/extensions/default-extension.png (compressed_size=1646 bytes, uncompressed_size=1657 bytes)
+[debug] [2026-05-11T07:35:40.067Z] [unzip] Processing entry: client\assets\extensions\default-extension.png
+[debug] [2026-05-11T07:35:40.067Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\extensions
+[debug] [2026-05-11T07:35:40.067Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\extensions\default-extension.png
+[debug] [2026-05-11T07:35:40.070Z] [unzip] Entry: client/assets/img/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-05-11T07:35:40.070Z] [unzip] Processing entry: client\assets\img\
+[debug] [2026-05-11T07:35:40.070Z] [unzip] mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\img\
+[debug] [2026-05-11T07:35:40.071Z] [unzip] Entry: client/assets/img/database.png (compressed_size=29449 bytes, uncompressed_size=29988 bytes)
+[debug] [2026-05-11T07:35:40.071Z] [unzip] Processing entry: client\assets\img\database.png
+[debug] [2026-05-11T07:35:40.071Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\img
+[debug] [2026-05-11T07:35:40.072Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\img\database.png
+[debug] [2026-05-11T07:35:40.074Z] [unzip] Entry: client/assets/provider-icons/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-05-11T07:35:40.074Z] [unzip] Processing entry: client\assets\provider-icons\
+[debug] [2026-05-11T07:35:40.074Z] [unzip] mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\
+[debug] [2026-05-11T07:35:40.076Z] [unzip] Entry: client/assets/provider-icons/auth_service_saml.svg (compressed_size=575 bytes, uncompressed_size=1226 bytes)
+[debug] [2026-05-11T07:35:40.076Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_saml.svg
+[debug] [2026-05-11T07:35:40.077Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.078Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_saml.svg
+[debug] [2026-05-11T07:35:40.081Z] [unzip] Entry: client/assets/provider-icons/auth_service_phone.svg (compressed_size=261 bytes, uncompressed_size=414 bytes)
+[debug] [2026-05-11T07:35:40.083Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_phone.svg
+[debug] [2026-05-11T07:35:40.083Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.085Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_phone.svg
+[debug] [2026-05-11T07:35:40.087Z] [unzip] Entry: client/assets/provider-icons/auth_service_facebook.svg (compressed_size=289 bytes, uncompressed_size=457 bytes)
+[debug] [2026-05-11T07:35:40.088Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_facebook.svg
+[debug] [2026-05-11T07:35:40.088Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.088Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_facebook.svg
+[debug] [2026-05-11T07:35:40.090Z] [unzip] Entry: client/assets/provider-icons/auth_service_game_center.svg (compressed_size=991 bytes, uncompressed_size=3921 bytes)
+[debug] [2026-05-11T07:35:40.091Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_game_center.svg
+[debug] [2026-05-11T07:35:40.091Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.091Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_game_center.svg
+[debug] [2026-05-11T07:35:40.096Z] [unzip] Entry: client/assets/provider-icons/auth_service_apple.svg (compressed_size=230 bytes, uncompressed_size=334 bytes)
+[debug] [2026-05-11T07:35:40.096Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_apple.svg
+[debug] [2026-05-11T07:35:40.097Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.098Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_apple.svg
+[debug] [2026-05-11T07:35:40.099Z] [unzip] Entry: client/assets/provider-icons/auth_service_github.svg (compressed_size=466 bytes, uncompressed_size=838 bytes)
+[debug] [2026-05-11T07:35:40.099Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_github.svg
+[debug] [2026-05-11T07:35:40.100Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.100Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_github.svg
+[debug] [2026-05-11T07:35:40.101Z] [unzip] Entry: client/assets/provider-icons/auth_service_mslive.svg (compressed_size=203 bytes, uncompressed_size=378 bytes)
+[debug] [2026-05-11T07:35:40.102Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_mslive.svg
+[debug] [2026-05-11T07:35:40.102Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.102Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_mslive.svg
+[debug] [2026-05-11T07:35:40.104Z] [unzip] Entry: client/assets/provider-icons/auth_service_yahoo.svg (compressed_size=577 bytes, uncompressed_size=1182 bytes)
+[debug] [2026-05-11T07:35:40.104Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_yahoo.svg
+[debug] [2026-05-11T07:35:40.105Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.105Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_yahoo.svg
+[debug] [2026-05-11T07:35:40.107Z] [unzip] Entry: client/assets/provider-icons/auth_service_twitter.svg (compressed_size=444 bytes, uncompressed_size=751 bytes)
+[debug] [2026-05-11T07:35:40.107Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_twitter.svg
+[debug] [2026-05-11T07:35:40.107Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.107Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_twitter.svg
+[debug] [2026-05-11T07:35:40.110Z] [unzip] Entry: client/assets/provider-icons/auth_service_play_games.svg (compressed_size=565 bytes, uncompressed_size=1173 bytes)
+[debug] [2026-05-11T07:35:40.110Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_play_games.svg
+[debug] [2026-05-11T07:35:40.110Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.111Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_play_games.svg
+[debug] [2026-05-11T07:35:40.113Z] [unzip] Entry: client/assets/provider-icons/auth_service_email.svg (compressed_size=228 bytes, uncompressed_size=326 bytes)
+[debug] [2026-05-11T07:35:40.113Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_email.svg
+[debug] [2026-05-11T07:35:40.113Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.114Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_email.svg
+[debug] [2026-05-11T07:35:40.117Z] [unzip] Entry: client/assets/provider-icons/auth_service_google.svg (compressed_size=409 bytes, uncompressed_size=720 bytes)
+[debug] [2026-05-11T07:35:40.117Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_google.svg
+[debug] [2026-05-11T07:35:40.117Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.118Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_google.svg
+[debug] [2026-05-11T07:35:40.120Z] [unzip] Entry: client/assets/provider-icons/auth_service_oidc.svg (compressed_size=414 bytes, uncompressed_size=858 bytes)
+[debug] [2026-05-11T07:35:40.121Z] [unzip] Processing entry: client\assets\provider-icons\auth_service_oidc.svg
+[debug] [2026-05-11T07:35:40.121Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons
+[debug] [2026-05-11T07:35:40.121Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\assets\provider-icons\auth_service_oidc.svg
+[debug] [2026-05-11T07:35:40.123Z] [unzip] Entry: client/browserconfig.xml (compressed_size=491 bytes, uncompressed_size=822 bytes)
+[debug] [2026-05-11T07:35:40.123Z] [unzip] Processing entry: client\browserconfig.xml
+[debug] [2026-05-11T07:35:40.123Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:40.124Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\browserconfig.xml
+[debug] [2026-05-11T07:35:40.125Z] [unzip] Entry: client/favicon-32x32.png (compressed_size=475 bytes, uncompressed_size=475 bytes)
+[debug] [2026-05-11T07:35:40.126Z] [unzip] Processing entry: client\favicon-32x32.png
+[debug] [2026-05-11T07:35:40.126Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client
+[debug] [2026-05-11T07:35:40.128Z] [unzip] Writing file: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\client\favicon-32x32.png
+[debug] [2026-05-11T07:35:40.130Z] [unzip] Entry: server/ (compressed_size=0 bytes, uncompressed_size=0 bytes)
+[debug] [2026-05-11T07:35:40.130Z] [unzip] Processing entry: server\
+[debug] [2026-05-11T07:35:40.130Z] [unzip] mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\server\
+[debug] [2026-05-11T07:35:40.131Z] [unzip] Entry: server/server.mjs.map (compressed_size=217845 bytes, uncompressed_size=944978 bytes)
+[debug] [2026-05-11T07:35:40.131Z] [unzip] Processing entry: server\server.mjs.map
+[debug] [2026-05-11T07:35:40.131Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\server
+[debug] [2026-05-11T07:35:40.132Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\server\server.mjs.map
+[debug] [2026-05-11T07:35:40.146Z] [unzip] Entry: server/server.mjs (compressed_size=276407 bytes, uncompressed_size=933701 bytes)
+[debug] [2026-05-11T07:35:40.147Z] [unzip] Processing entry: server\server.mjs
+[debug] [2026-05-11T07:35:40.147Z] [unzip] else mkdir: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\server
+[debug] [2026-05-11T07:35:40.148Z] [unzip] deflating: C:\Users\BARAKO\.cache\firebase\emulators\ui-v1.15.0\server\server.mjs
+[info] i  functions: Watching "C:\Users\BARAKO\Desktop\myAgent\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\" for Cloud Functions..."}}
+[debug] [2026-05-11T07:35:40.170Z] Validating nodejs source
+[debug] [2026-05-11T07:35:42.571Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"skip lint\"",
+    "build": "echo \"skip build\"",
+    "build:watch": "echo \"skip build\"",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.4.1",
+    "typescript": "^6.0.0"
+  },
+  "private": true
+}
+[debug] [2026-05-11T07:35:42.572Z] Building nodejs source
+[debug] [2026-05-11T07:35:42.573Z] Failed to find version of module node: reached end of search path C:\Users\BARAKO\Desktop\myAgent\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-05-11T07:35:42.578Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-11T07:35:42.596Z] Found firebase-functions binary at 'C:\Users\BARAKO\Desktop\myAgent\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8253
+
+[debug] [2026-05-11T07:35:44.551Z] Got response from /__/functions.yaml {"endpoints":{"sendMessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{"invoker":["allUsers"]},"entryPoint":"sendMessage"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: sendMessage. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendMessage."}}
+[info] +  functions[us-central1-sendMessage]: http function initialized (http://127.0.0.1:5001/my-next-b12c9/us-central1/sendMessage). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/my-next-b12c9/us-central1/sendMessage)."}}
+[debug] [2026-05-11T07:35:48.648Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase SQL Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2026-05-11T07:36:15.273Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:36:15.273Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:36:15.274Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:36:15.273Z"],"workRunningCount":1}
+[debug] [2026-05-11T07:36:15.275Z] Accepted request POST /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T07:36:15.276Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T07:36:15.277Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T07:36:15.295Z] [worker-pool] addWorker(us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-sendMessage)"}}
+[debug] [2026-05-11T07:36:15.300Z] [worker-pool] Adding worker with key us-central1-sendMessage, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-sendMessage, total=1"}}
+[debug] [2026-05-11T07:36:17.988Z] [runtime-status] [9888] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.8.0","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.8.0\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-05-11T07:36:17.991Z] [runtime-status] [9888] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.5","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.5\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-05-11T07:36:17.992Z] [runtime-status] [9888] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-05-11T07:36:17.995Z] [runtime-status] [9888] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.5","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.5\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-05-11T07:36:17.996Z] [runtime-status] [9888] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-05-11T07:36:17.998Z] [runtime-status] [9888] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.8.0","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.8.0\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-05-11T07:36:18.197Z] [runtime-status] [9888] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.5","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.5\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-05-11T07:36:19.535Z] [runtime-status] [9888] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.8.0","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.8.0\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2026-05-11T07:36:19.542Z] [runtime-status] [9888] initializeApp(DEFAULT) {"storageBucket":"my-next-b12c9.firebasestorage.app","projectId":"my-next-b12c9"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] initializeApp(DEFAULT) {\"storageBucket\":\"my-next-b12c9.firebasestorage.app\",\"projectId\":\"my-next-b12c9\"}"}}
+[debug] [2026-05-11T07:36:19.579Z] [runtime-status] [9888] Functions runtime initialized. {"cwd":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions","node_version":"22.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\",\"node_version\":\"22.14.0\"}"}}
+[debug] [2026-05-11T07:36:19.579Z] [runtime-status] [9888] Listening to port: \\?\pipe\fire_emu_cdcf2fa3912bb6a2 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [9888] Listening to port: \\\\?\\pipe\\fire_emu_cdcf2fa3912bb6a2"}}
+[debug] [2026-05-11T07:36:19.652Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE"}}
+[debug] [2026-05-11T07:36:19.653Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T07:36:19.655Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY"}}
+[debug] [2026-05-11T07:36:19.712Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 57.2158ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 57.2158ms"}}
+[debug] [2026-05-11T07:36:19.713Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE"}}
+[debug] [2026-05-11T07:36:19.714Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T07:36:19.714Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T07:36:19.715Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:37:06.812Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:37:06.812Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:37:06.813Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:37:06.812Z"],"workRunningCount":1}
+[debug] [2026-05-11T07:37:06.813Z] Accepted request GET /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T07:37:06.814Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T07:37:06.814Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T07:37:06.815Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T07:37:06.816Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY"}}
+[debug] [2026-05-11T07:37:06.821Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 5.9716ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 5.9716ms"}}
+[debug] [2026-05-11T07:37:06.822Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE"}}
+[debug] [2026-05-11T07:37:06.822Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T07:37:06.822Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T07:37:06.823Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:38:04.113Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:38:04.113Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:38:04.114Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:38:04.113Z"],"workRunningCount":1}
+[debug] [2026-05-11T07:38:04.114Z] Accepted request GET /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T07:38:04.114Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T07:38:04.115Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T07:38:04.115Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T07:38:04.116Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY"}}
+[debug] [2026-05-11T07:38:04.121Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 6.169ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 6.169ms"}}
+[debug] [2026-05-11T07:38:04.122Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE"}}
+[debug] [2026-05-11T07:38:04.123Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T07:38:04.123Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T07:38:04.123Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:38:04.627Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2026-05-11T07:38:20.220Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:38:20.220Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:38:20.220Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:38:20.220Z"],"workRunningCount":1}
+[debug] [2026-05-11T07:38:20.221Z] Accepted request GET /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T07:38:20.222Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T07:38:20.222Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T07:38:20.222Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T07:38:20.223Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY"}}
+[debug] [2026-05-11T07:38:20.232Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 9.9954ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 9.9954ms"}}
+[debug] [2026-05-11T07:38:20.233Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE"}}
+[debug] [2026-05-11T07:38:20.234Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T07:38:20.234Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T07:38:20.235Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:38:20.663Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2026-05-11T07:42:32.042Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:42:32.042Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:42:32.043Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:42:32.042Z"],"workRunningCount":1}
+[debug] [2026-05-11T07:42:32.043Z] Accepted request OPTIONS /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T07:42:32.043Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T07:42:32.044Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T07:42:32.044Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T07:42:32.045Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY"}}
+[debug] [2026-05-11T07:42:32.053Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 8.7999ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 8.7999ms"}}
+[debug] [2026-05-11T07:42:32.055Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE"}}
+[debug] [2026-05-11T07:42:32.055Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T07:42:32.055Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T07:42:32.056Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:42:32.058Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:42:32.058Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:42:32.058Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:42:32.058Z"],"workRunningCount":1}
+[debug] [2026-05-11T07:42:32.058Z] Accepted request POST /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T07:42:32.059Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T07:42:32.059Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T07:42:32.060Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T07:42:32.061Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: BUSY"}}
+[warn] !  functions: The Firebase Authentication emulator is not running, so calls to Firebase Authentication will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"The Firebase Authentication emulator is not running, so calls to Firebase Authentication will affect production."}}
+[debug] [2026-05-11T07:42:32.313Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 252.2151ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 252.2151ms"}}
+[debug] [2026-05-11T07:42:32.314Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: IDLE"}}
+[debug] [2026-05-11T07:42:32.315Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T07:42:32.315Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T07:42:32.315Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:49:48.795Z] File C:\Users\BARAKO\Desktop\myAgent\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\index.js changed, reloading triggers"}}
+[debug] [2026-05-11T07:49:49.806Z] Validating nodejs source
+[debug] [2026-05-11T07:49:51.826Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"skip lint\"",
+    "build": "echo \"skip build\"",
+    "build:watch": "echo \"skip build\"",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.4.1",
+    "typescript": "^6.0.0"
+  },
+  "private": true
+}
+[debug] [2026-05-11T07:49:51.827Z] Building nodejs source
+[debug] [2026-05-11T07:49:51.827Z] Failed to find version of module node: reached end of search path C:\Users\BARAKO\Desktop\myAgent\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-05-11T07:49:51.828Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-11T07:49:51.841Z] Found firebase-functions binary at 'C:\Users\BARAKO\Desktop\myAgent\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8446
+
+[debug] [2026-05-11T07:49:53.430Z] Got response from /__/functions.yaml {"endpoints":{"sendMessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{},"entryPoint":"sendMessage"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: sendMessage. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendMessage."}}
+[debug] [2026-05-11T07:49:57.513Z] [worker-pool] Shutting down IDLE worker (us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-sendMessage)"}}
+[debug] [2026-05-11T07:49:57.514Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: FINISHING"}}
+[debug] [2026-05-11T07:49:57.525Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: exited"}}
+[debug] [2026-05-11T07:49:57.526Z] [worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-eb7f0fba-f037-4d28-8489-9d912a9ead85]: FINISHED"}}
+[debug] [2026-05-11T07:52:51.887Z] File C:\Users\BARAKO\Desktop\myAgent\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\index.js changed, reloading triggers"}}
+[debug] [2026-05-11T07:52:52.889Z] Validating nodejs source
+[debug] [2026-05-11T07:52:55.343Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"skip lint\"",
+    "build": "echo \"skip build\"",
+    "build:watch": "echo \"skip build\"",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.4.1",
+    "typescript": "^6.0.0"
+  },
+  "private": true
+}
+[debug] [2026-05-11T07:52:55.343Z] Building nodejs source
+[debug] [2026-05-11T07:52:55.344Z] Failed to find version of module node: reached end of search path C:\Users\BARAKO\Desktop\myAgent\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-05-11T07:52:55.346Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-11T07:52:55.363Z] Found firebase-functions binary at 'C:\Users\BARAKO\Desktop\myAgent\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8926
+
+[debug] [2026-05-11T07:52:56.748Z] Got response from /__/functions.yaml {"endpoints":{"sendMessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{"invoker":["public"]},"entryPoint":"sendMessage"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: sendMessage. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendMessage."}}
+[debug] [2026-05-11T07:55:29.912Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:55:29.912Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:55:29.913Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:55:29.912Z"],"workRunningCount":1}
+[debug] [2026-05-11T07:55:29.913Z] Accepted request OPTIONS /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T07:55:29.914Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T07:55:29.915Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T07:55:29.915Z] [worker-pool] Cleaned up workers for us-central1-sendMessage: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-sendMessage: 1 --> 0"}}
+[debug] [2026-05-11T07:55:29.929Z] [worker-pool] addWorker(us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-sendMessage)"}}
+[debug] [2026-05-11T07:55:29.929Z] [worker-pool] Adding worker with key us-central1-sendMessage, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-sendMessage, total=1"}}
+[debug] [2026-05-11T07:55:32.403Z] [runtime-status] [12820] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.8.0","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.8.0\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-05-11T07:55:32.408Z] [runtime-status] [12820] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.5","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.5\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-05-11T07:55:32.409Z] [runtime-status] [12820] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2026-05-11T07:55:32.412Z] [runtime-status] [12820] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.5","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.5\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-05-11T07:55:32.412Z] [runtime-status] [12820] Detected firebase-functions v7+, skipping legacy stubs. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Detected firebase-functions v7+, skipping legacy stubs."}}
+[debug] [2026-05-11T07:55:32.414Z] [runtime-status] [12820] Resolved module firebase-admin {"declared":true,"installed":true,"version":"13.8.0","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"13.8.0\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2026-05-11T07:55:32.586Z] [runtime-status] [12820] Resolved module firebase-functions {"declared":true,"installed":true,"version":"7.2.5","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"7.2.5\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2026-05-11T07:55:33.519Z] [runtime-status] [12820] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"13.8.0","resolution":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"13.8.0\",\"resolution\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2026-05-11T07:55:33.523Z] [runtime-status] [12820] initializeApp(DEFAULT) {"storageBucket":"my-next-b12c9.firebasestorage.app","projectId":"my-next-b12c9"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] initializeApp(DEFAULT) {\"storageBucket\":\"my-next-b12c9.firebasestorage.app\",\"projectId\":\"my-next-b12c9\"}"}}
+[debug] [2026-05-11T07:55:33.539Z] [runtime-status] [12820] Functions runtime initialized. {"cwd":"C:\\Users\\BARAKO\\Desktop\\myAgent\\functions","node_version":"22.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\functions\",\"node_version\":\"22.14.0\"}"}}
+[debug] [2026-05-11T07:55:33.539Z] [runtime-status] [12820] Listening to port: \\?\pipe\fire_emu_a9ff2ea0a2d0e263 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[runtime-status] [12820] Listening to port: \\\\?\\pipe\\fire_emu_a9ff2ea0a2d0e263"}}
+[debug] [2026-05-11T07:55:33.596Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE"}}
+[debug] [2026-05-11T07:55:33.596Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T07:55:33.597Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: BUSY"}}
+[debug] [2026-05-11T07:55:33.604Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 7.2873ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 7.2873ms"}}
+[debug] [2026-05-11T07:55:33.605Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE"}}
+[debug] [2026-05-11T07:55:33.605Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T07:55:33.606Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T07:55:33.606Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:55:33.608Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:55:33.608Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T07:55:33.608Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T07:55:33.608Z"],"workRunningCount":1}
+[debug] [2026-05-11T07:55:33.608Z] Accepted request POST /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T07:55:33.609Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T07:55:33.609Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T07:55:33.609Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T07:55:33.610Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: BUSY"}}
+[debug] [2026-05-11T07:55:33.862Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 252.2145ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 252.2145ms"}}
+[debug] [2026-05-11T07:55:33.862Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE"}}
+[debug] [2026-05-11T07:55:33.863Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T07:55:33.863Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T07:55:33.863Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T08:00:50.596Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T08:00:50.596Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T08:00:50.597Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T08:00:50.596Z"],"workRunningCount":1}
+[debug] [2026-05-11T08:00:50.598Z] Accepted request OPTIONS /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T08:00:50.599Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T08:00:50.599Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T08:00:50.600Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T08:00:50.600Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: BUSY"}}
+[debug] [2026-05-11T08:00:50.606Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 5.5618ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 5.5618ms"}}
+[debug] [2026-05-11T08:00:50.607Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE"}}
+[debug] [2026-05-11T08:00:50.607Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T08:00:50.607Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T08:00:50.608Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T08:00:50.610Z] [work-queue] {"queuedWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T08:00:50.610Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T08:00:50.611Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/my-next-b12c9/us-central1/sendMessage-2026-05-11T08:00:50.610Z"],"workRunningCount":1}
+[debug] [2026-05-11T08:00:50.611Z] Accepted request POST /my-next-b12c9/us-central1/sendMessage --> us-central1-sendMessage
+[debug] [2026-05-11T08:00:50.612Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2026-05-11T08:00:50.613Z] [functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/my-next-b12c9/us-central1/sendMessage, mapping to path=/"}}
+[debug] [2026-05-11T08:00:50.615Z] [worker-pool] submitRequest(triggerId=us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-sendMessage)"}}
+[info] i  functions: Beginning execution of "us-central1-sendMessage" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Beginning execution of \"us-central1-sendMessage\""}}
+[debug] [2026-05-11T08:00:50.616Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: BUSY"}}
+[debug] [2026-05-11T08:00:50.631Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-sendMessage" in 14.8294ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finished \"us-central1-sendMessage\" in 14.8294ms"}}
+[debug] [2026-05-11T08:00:50.632Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: IDLE"}}
+[debug] [2026-05-11T08:00:50.632Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2026-05-11T08:00:50.632Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2026-05-11T08:00:50.633Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2026-05-11T08:22:05.552Z] File C:\Users\BARAKO\Desktop\myAgent\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\index.js changed, reloading triggers"}}
+[debug] [2026-05-11T08:22:06.555Z] Validating nodejs source
+[debug] [2026-05-11T08:22:09.754Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"skip lint\"",
+    "build": "echo \"skip build\"",
+    "build:watch": "echo \"skip build\"",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.4.1",
+    "typescript": "^6.0.0"
+  },
+  "private": true
+}
+[debug] [2026-05-11T08:22:09.755Z] Building nodejs source
+[debug] [2026-05-11T08:22:09.755Z] Failed to find version of module node: reached end of search path C:\Users\BARAKO\Desktop\myAgent\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-05-11T08:22:09.756Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-11T08:22:09.769Z] Found firebase-functions binary at 'C:\Users\BARAKO\Desktop\myAgent\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8083
+
+[debug] [2026-05-11T08:22:10.690Z] File C:\Users\BARAKO\Desktop\myAgent\functions\package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\package.json changed, reloading triggers"}}
+[debug] [2026-05-11T08:22:11.459Z] Got response from /__/functions.yaml {"endpoints":{"sendMessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{"invoker":["public"]},"entryPoint":"sendMessage"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-11T08:22:11.700Z] Validating nodejs source
+[debug] [2026-05-11T08:22:14.277Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"skip lint\"",
+    "build": "echo \"skip build\"",
+    "build:watch": "echo \"skip build\"",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.4.1",
+    "typescript": "^6.0.0"
+  },
+  "private": true
+}
+[debug] [2026-05-11T08:22:14.278Z] Building nodejs source
+[debug] [2026-05-11T08:22:14.278Z] Failed to find version of module node: reached end of search path C:\Users\BARAKO\Desktop\myAgent\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-05-11T08:22:14.279Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-11T08:22:14.295Z] Found firebase-functions binary at 'C:\Users\BARAKO\Desktop\myAgent\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8449
+
+[info] +  functions: Loaded functions definitions from source: sendMessage. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendMessage."}}
+[debug] [2026-05-11T08:22:15.525Z] [worker-pool] Shutting down IDLE worker (us-central1-sendMessage) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-sendMessage)"}}
+[debug] [2026-05-11T08:22:15.525Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: FINISHING"}}
+[debug] [2026-05-11T08:22:15.572Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: exited"}}
+[debug] [2026-05-11T08:22:15.572Z] [worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-sendMessage"},"extension":{},"message":"[worker-us-central1-sendMessage-5cf8dc6a-2df1-4779-91d0-1228a11a58b2]: FINISHED"}}
+[debug] [2026-05-11T08:22:15.909Z] Got response from /__/functions.yaml {"endpoints":{"sendMessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{"invoker":["public"]},"entryPoint":"sendMessage"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-05-11T08:22:17.477Z] File C:\Users\BARAKO\Desktop\myAgent\functions\package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\package.json changed, reloading triggers"}}
+[debug] [2026-05-11T08:22:18.482Z] Validating nodejs source
+[debug] [2026-05-11T08:22:20.762Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"skip lint\"",
+    "build": "echo \"skip build\"",
+    "build:watch": "echo \"skip build\"",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.4.1",
+    "jest": "^29.0.0",
+    "typescript": "^6.0.0"
+  },
+  "private": true
+}
+[debug] [2026-05-11T08:22:20.762Z] Building nodejs source
+[debug] [2026-05-11T08:22:20.763Z] Failed to find version of module node: reached end of search path C:\Users\BARAKO\Desktop\myAgent\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-05-11T08:22:20.766Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-11T08:22:20.784Z] Found firebase-functions binary at 'C:\Users\BARAKO\Desktop\myAgent\functions\node_modules\.bin\firebase-functions'
+[info] +  functions: Loaded functions definitions from source: sendMessage. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendMessage."}}
+[info] Serving at port 8818
+
+[debug] [2026-05-11T08:22:22.465Z] Got response from /__/functions.yaml {"endpoints":{"sendMessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{"invoker":["public"]},"entryPoint":"sendMessage"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: sendMessage. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendMessage."}}
+[debug] [2026-05-11T08:24:27.466Z] File C:\Users\BARAKO\Desktop\myAgent\functions\package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\BARAKO\\Desktop\\myAgent\\functions\\package-lock.json changed, reloading triggers"}}
+[debug] [2026-05-11T08:24:28.479Z] Validating nodejs source
+[debug] [2026-05-11T08:24:31.454Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "echo \"skip lint\"",
+    "build": "echo \"skip build\"",
+    "build:watch": "echo \"skip build\"",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.4.1",
+    "jest": "^29.0.0",
+    "typescript": "^6.0.0"
+  },
+  "private": true
+}
+[debug] [2026-05-11T08:24:31.454Z] Building nodejs source
+[debug] [2026-05-11T08:24:31.454Z] Failed to find version of module node: reached end of search path C:\Users\BARAKO\Desktop\myAgent\functions\node_modules
+[warn] !  functions: Your requested "node" version "24" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2026-05-11T08:24:31.456Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-05-11T08:24:31.470Z] Found firebase-functions binary at 'C:\Users\BARAKO\Desktop\myAgent\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8606
+
+[debug] [2026-05-11T08:24:32.979Z] Got response from /__/functions.yaml {"endpoints":{"sendMessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{"invoker":["public"]},"entryPoint":"sendMessage"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: sendMessage. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendMessage."}}

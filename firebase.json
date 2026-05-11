@@ -24,6 +24,26 @@
           }
         ]
       }
+    ],
+    "rewrites": [
+      {
+        "source": "/api/send-message",
+        "function": "sendMessage",
+        "region": "us-central1"
+      }
     ]
-  }
+  },
+  "functions": [
+    {
+      "codebase": "default",
+      "source": "functions",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ]
 }

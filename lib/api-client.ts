@@ -1,37 +1,37 @@
 import { auth } from '@/lib/firebase';
 
-export async function sendMessage(message: string): Promise<any> {
-  try {
-    const user = auth?.currentUser;
+export interface MessageResponse {
+  success: boolean;
+  message: string;
+  receivedMessage: string;
+  userId: string;
+  userEmail: string | null;
+  timestamp: string;
+  status: string;
+}
 
-    if (!user) {
-      throw new Error('User not authenticated');
-    }
+const SEND_MESSAGE_URL =
+  process.env.NEXT_PUBLIC_SEND_MESSAGE_URL ?? '/api/send-message';
 
-    // Get the ID token from Firebase
-    const idToken = await user.getIdToken();
+export async function sendMessage(message: string): Promise<MessageResponse> {
+  const user = auth?.currentUser;
+  if (!user) throw new Error('User not authenticated');
 
-    const response = await fetch('/api/send-message', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${idToken}`,
-      },
-      body: JSON.stringify({
-        message,
-        userId: user.uid,
-        userEmail: user.email,
-      }),
-    });
+  const idToken = await user.getIdToken();
 
-    if (!response.ok) {
-      throw new Error(`Failed to send message: ${response.statusText}`);
-    }
+  const response = await fetch(SEND_MESSAGE_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${idToken}`,
+    },
+    body: JSON.stringify({ message, userId: user.uid, userEmail: user.email }),
+  });
 
-    const data = await response.json();
-    return data;
-  } catch (error: any) {
-    console.error('Error sending message:', error);
-    throw new Error(error.message || 'Failed to send message');
+  if (!response.ok) {
+    const err = await response.json().catch(() => ({})) as { error?: string };
+    throw new Error(err.error || `Request failed: ${response.statusText}`);
   }
+
+  return response.json() as Promise<MessageResponse>;
 }

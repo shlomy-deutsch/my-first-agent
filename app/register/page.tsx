@@ -38,8 +38,8 @@ export default function RegisterPage() {
     try {
       await register(formData.email, formData.password, formData.name);
       router.push('/dashboard'); // Redirect to dashboard after successful registration
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error) {
+      setError(error instanceof Error ? error.message : 'Registration failed');
     }
   };
 

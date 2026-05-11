@@ -7,7 +7,7 @@ vi.mock('@/lib/firebase', () => ({
 import { sendMessage } from '@/lib/api-client';
 import { auth } from '@/lib/firebase';
 
-const mockAuth = auth as { currentUser: any };
+const mockAuth = auth as { currentUser: { uid: string; email: string; getIdToken: () => Promise<string> } | null };
 
 beforeEach(() => {
   vi.clearAllMocks();

@@ -23,13 +23,10 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!!auth);
 
   useEffect(() => {
-    if (!auth) {
-      setLoading(false);
-      return;
-    }
+    if (!auth) return;
 
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
@@ -43,8 +40,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!auth) throw new Error('Firebase not initialized');
     try {
       await signInWithEmailAndPassword(auth, email, password);
-    } catch (error: any) {
-      throw new Error(error.message || 'Login failed');
+    } catch (error) {
+      throw new Error(error instanceof Error ? error.message : 'Login failed');
     }
   };
 
@@ -55,8 +52,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       if (displayName && userCredential.user) {
         await updateProfile(userCredential.user, { displayName });
       }
-    } catch (error: any) {
-      throw new Error(error.message || 'Registration failed');
+    } catch (error) {
+      throw new Error(error instanceof Error ? error.message : 'Registration failed');
     }
   };
 
@@ -64,8 +61,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!auth) throw new Error('Firebase not initialized');
     try {
       await signOut(auth);
-    } catch (error: any) {
-      throw new Error(error.message || 'Logout failed');
+    } catch (error) {
+      throw new Error(error instanceof Error ? error.message : 'Logout failed');
     }
   };
 

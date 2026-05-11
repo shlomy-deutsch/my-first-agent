@@ -80,7 +80,7 @@ export default function DashboardPage() {
         {/* Welcome Section */}
         <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg shadow-lg p-8 text-white mb-8">
           <h2 className="text-3xl font-bold mb-2">Welcome back, {user.displayName || user.email}!</h2>
-          <p className="text-blue-100">Here's an overview of your account activity and status</p>
+          <p className="text-blue-100">Here&apos;s an overview of your account activity and status</p>
         </div>
 
         {/* User Info Cards */}

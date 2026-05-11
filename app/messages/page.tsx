@@ -2,16 +2,8 @@
 
 import { useState } from 'react';
 import { useAuth } from '@/lib/auth-context';
-import { sendMessage } from '@/lib/api-client';
+import { sendMessage, type MessageResponse } from '@/lib/api-client';
 import Link from 'next/link';
-
-interface MessageResponse {
-  success: boolean;
-  message: string;
-  receivedMessage: string;
-  timestamp: string;
-  status: string;
-}
 
 export default function MessagesPage() {
   const { user, logout, loading } = useAuth();
@@ -50,8 +42,8 @@ export default function MessagesPage() {
       const response = await sendMessage(messageText);
       setResponses([response, ...responses]);
       setMessageText('');
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error) {
+      setError(error instanceof Error ? error.message : 'Failed to send message');
     } finally {
       setIsSending(false);
     }

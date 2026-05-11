@@ -27,6 +27,11 @@
     ],
     "rewrites": [
       {
+        "source": "/api/send-message",
+        "function": "saveMessage",
+        "region": "us-central1"
+      },
+      {
         "source": "/auth/signin",
         "function": "signinUser",
         "region": "us-central1"

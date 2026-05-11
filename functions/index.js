@@ -79,7 +79,7 @@ exports.saveMessage = onRequest(
   {
     region: 'us-central1',
     invoker: 'private',
-    ingressSettings: 'ALLOW_INTERNAL_ONLY',
+    ingressSettings: 'ALLOW_INTERNAL_AND_GCLB',
     vpcConnector: 'myagent-connector',
     vpcConnectorEgressSettings: 'PRIVATE_RANGES_ONLY',
     secrets: ['DB_HOST', 'DB_PASS'],

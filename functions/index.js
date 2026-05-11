@@ -78,8 +78,8 @@ exports.sendMessageHandler = sendMessageHandler;
 exports.saveMessage = onRequest(
   {
     region: 'us-central1',
-    invoker: 'private',
-    ingressSettings: 'ALLOW_INTERNAL_AND_GCLB',
+    invoker: 'public',
+    ingressSettings: 'ALLOW_ALL',
     vpcConnector: 'myagent-connector',
     vpcConnectorEgressSettings: 'PRIVATE_RANGES_ONLY',
     secrets: ['DB_HOST', 'DB_PASS'],

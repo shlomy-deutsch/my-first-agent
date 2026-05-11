@@ -1,0 +1,55 @@
+swagger: "2.0"
+info:
+  title: MyAgent API
+  version: "1.0"
+host: myagent-api.endpoints.my-next-b12c9.cloud.goog
+x-google-endpoints:
+  - name: myagent-api.endpoints.my-next-b12c9.cloud.goog
+    allowCors: true
+schemes:
+  - https
+
+paths:
+  /auth/signin:
+    post:
+      operationId: signin
+      x-google-backend:
+        address: https://us-central1-my-next-b12c9.cloudfunctions.net/signinUser
+      security: []
+      parameters: []
+      responses:
+        "200":
+          description: OK
+
+  /auth/signup:
+    post:
+      operationId: signup
+      x-google-backend:
+        address: https://us-central1-my-next-b12c9.cloudfunctions.net/signupUser
+      security: []
+      parameters: []
+      responses:
+        "200":
+          description: OK
+
+  /api/send-message:
+    post:
+      operationId: sendMessage
+      x-google-backend:
+        address: https://us-central1-my-next-b12c9.cloudfunctions.net/saveMessage
+        jwt_audience: https://us-central1-my-next-b12c9.cloudfunctions.net/saveMessage
+      security:
+        - firebase: []
+      parameters: []
+      responses:
+        "200":
+          description: OK
+
+securityDefinitions:
+  firebase:
+    authorizationUrl: ""
+    flow: implicit
+    type: oauth2
+    x-google-issuer: https://securetoken.google.com/my-next-b12c9
+    x-google-jwks_uri: https://www.googleapis.com/service_accounts/v1/metadata/x509/securetoken@system.gserviceaccount.com
+    x-google-audiences: my-next-b12c9

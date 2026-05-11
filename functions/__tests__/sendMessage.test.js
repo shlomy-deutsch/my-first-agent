@@ -7,6 +7,10 @@ jest.mock('firebase-admin', () => ({
   auth: jest.fn(),
 }));
 
+jest.mock('pg', () => ({
+  Pool: jest.fn(() => ({ query: jest.fn() })),
+}));
+
 const admin = require('firebase-admin');
 const { sendMessageHandler } = require('../index');
 

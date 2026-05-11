@@ -7,9 +7,47 @@ on:
       - master
 
 jobs:
-  deploy:
+  verify:
+    name: Verify
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Security audit (frontend)
+        run: npm audit --audit-level=high
+
+      - name: Install functions dependencies
+        run: npm ci
+        working-directory: functions
+
+      - name: Unit tests (functions)
+        run: npm test
+        working-directory: functions
+
+      - name: Security audit (functions)
+        run: npm audit --audit-level=high
+        working-directory: functions
+
+  deploy:
+    name: Deploy
+    needs: verify
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 

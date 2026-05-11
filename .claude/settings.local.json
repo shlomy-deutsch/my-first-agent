@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl *)",
+      "Bash(rm \"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\app\\\\api\\\\send-message\\\\route.ts\")",
+      "Bash(rmdir \"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\app\\\\api\\\\send-message\")",
+      "Bash(rmdir \"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\app\\\\api\")",
+      "Bash(firebase deploy *)"
+    ]
+  }
+}

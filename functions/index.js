@@ -48,7 +48,7 @@ async function sendMessageHandler(req, res) {
 
     let savedId = null;
     if (process.env.DB_HOST) {
-      const db = getPool();
+      const db = await getPool();
       const { rows } = await db.query(
         'INSERT INTO messages (user_id, user_email, message) VALUES ($1, $2, $3) RETURNING id',
         [decoded.uid, decoded.email || null, message]

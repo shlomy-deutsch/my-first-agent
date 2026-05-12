@@ -6,7 +6,30 @@
       "Bash(rmdir \"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\app\\\\api\\\\send-message\")",
       "Bash(rmdir \"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\\\\app\\\\api\")",
       "Bash(firebase deploy *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(export PATH=\"$PATH:/c/Users/BARAKO/AppData/Local/Google/Cloud SDK/google-cloud-sdk/bin\")",
+      "Bash(npx firebase-tools@latest deploy --only hosting --project my-next-b12c9 --force)",
+      "Bash(npx firebase-tools@latest deploy --only functions,hosting --project my-next-b12c9 --force)",
+      "Bash(gcloud functions *)",
+      "Bash(npx firebase-tools@latest deploy --only functions --project my-next-b12c9 --force)",
+      "Bash(gcloud run *)",
+      "Bash(gcloud logging *)",
+      "Bash(gcloud auth *)",
+      "PowerShell(cmd /c \"claude --version\")",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\BARAKO\\\\Desktop\\\\myAgent\" -Recurse -Force)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "Bash(npx -y firebase-tools@latest deploy --only functions:adminApi)",
+      "Bash(npx -y firebase-tools@latest deploy --only hosting)",
+      "Bash(Get-Content \"C:\\\\Users\\\\BARAKO\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-BARAKO-Desktop-myAgent\\\\72ce05fc-589f-422c-9132-3dd37371\\\\tasks\\\\bwzfaf33b.output\" -Wait -Tail 30)",
+      "Bash(exit 0)",
+      "Bash(node -e ' *)",
+      "Bash(npx -y firebase-tools@latest functions:secrets:set GEMINI_API_KEY)",
+      "Bash(npm install *)",
+      "Bash(npx -y firebase-tools@latest deploy --only functions)",
+      "Bash(npx -y firebase-tools@latest functions:log --only chat --limit 50)",
+      "Bash(npx -y firebase-tools@latest functions:log --only chat)",
+      "Bash(node scripts/generate-icons.js)"
     ]
   }
 }

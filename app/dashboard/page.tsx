@@ -62,6 +62,9 @@ export default function DashboardPage() {
               <Link href="/messages" className="text-green-600 hover:text-green-700 font-semibold">
                 Messages
               </Link>
+              <Link href="/chat" className="text-purple-600 hover:text-purple-700 font-semibold">
+                AI Chat
+              </Link>
               <Link href="/admin" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Admin Dashboard
               </Link>

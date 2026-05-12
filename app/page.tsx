@@ -34,8 +34,11 @@ export default function Home() {
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black min-h-screen">
       <div className="text-center space-y-8">
         <div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to My App</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to My App 🚀</h1>
           <p className="text-xl text-gray-600 mb-8">Please sign in to access your dashboard</p>
+          <span className="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            ✓ Updated via PWA
+          </span>
         </div>
 
         <div className="space-y-4">
